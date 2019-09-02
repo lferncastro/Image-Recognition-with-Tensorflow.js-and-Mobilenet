@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homewort N°1 - Image Classifier using Tensorflow.js and Mobilenet</title>
+	<script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+	<link rel="stylesheet" type="text/css" href="test.css">
+</head>
+	<body>
+		<div class="page">
+			<div class="container1">
+				<div class="header1">
+					<h3>Image classifier using your pictures</h3>
+				</div>
+				<div class="instruct1">
+					<input type="file" id="file" accept="image/*" onchange="loadFile(event)"/>
+					<label class="upload-button" for="file">Upload your image</label>	
+				</div>
+				<div class="im-display">
+					<img id="img-output"/>
+				</div>
+				<div class="classifier">
+					<input type="submit" value="Classify the uploaded image" id="classify"/>
+				</div>
+				<div class="response">
+					<div id="answer"></div>
+				</div>
+			</div>
+			<div class="container2">
+				<div class="header2">
+					<h3>Live image classifier</h3>
+				</div>
+				<div class="instruct2">
+					<label>Do the signs of "Rock, Paper, Scissors"</label>
+				</div>
+				<div class="video-webcam">
+					<video autoplay playsinline muted id="webcam" width="320" height="320"></video>
+				</div>
+				<div class="classifier2">
+					<button id="class-a">Rock</button>
+        			<button id="class-b">Paper</button>
+        			<button id="class-c">Scissors</button>
+        			<button id="class-d">Lizzard</button>
+        			<button id="class-e">Spock</button>
+				</div>
+				<div class="response2">
+					<div id="answer2"></div>
+				</div>
+			</div>
+		</div>
+		<script src="test.js"></script>
+	</body>
+</html>
